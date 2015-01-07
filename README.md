@@ -1,2 +1,3 @@
 # sampleRepo
-the Sample repo
+the Sample repo by charlieg
+
