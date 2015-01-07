@@ -1,0 +1,30 @@
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
+    var Space_block = 'red,blue';
+    var ab = jQuery.noConflict(); /* ====> jQuery no conflict declaration */
+    
+    /* DOM ready */		
+    ab(document).ready(function($) {
+      //alert('domReady');
+    }); /* <== end of DOM ready */	
+
+   /* Window Load */
+    ab(window).load(function ($) {
+		if(Space_block){
+			var colors = Space_block.split(',');
+			console.log('Space Block colors: ',Space_block);
+			for(var i=0;i<colors.length;i++){
+				if(colors[i]){
+					ab('.spacer-block').eq(i)
+					.find('.sqs-block-content')
+					.css({
+						'background-color':colors[i],
+						'visibility':'visible'
+					});
+				}
+			}
+		}
+		//alert('windowLoad');
+    }); /* <== end of Window Load */
+</script>
